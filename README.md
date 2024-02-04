@@ -6,7 +6,7 @@ testrepo
 
 It is a markdown file in repository!!
 
-## Lets see
+## Lets get started
 
 - What is git: system to keep track of changes happen accross a set of files
 
