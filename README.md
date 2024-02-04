@@ -111,3 +111,45 @@ tree trunk.
   - create a branch and make req changes (add->commit->push)
   - git remote add upstream <link of forked repo>-> this will keep us insink with original
   - git fetch upstream-> to download the changed and git rebase upstream/master->to add those changes to top of our work
+
+## Other features
+
+We have three diff files area in git
+current working dir, Staging area, commits
+
+- git reset
+
+  - git reset-> this will Unstage all staged files
+  - git reset <commit-ID> -> Rollback to a previous commit, but keep changes in the working directory
+  - git reset <commit-ID> --hard -> Rollback to a previous commit AND discard all changes
+  - git reset should not be used when commit is pushed to remote repo
+
+- git revert
+
+  - git revert <commit-ID> -m "reverting last commit" -> Undo a commit with a new commit
+  - git revert Undo's a commit with out changing the course of history
+
+- git commit -- ammend
+
+  - git commit --amend -m "better message"-> this Update the message on your last commit
+  - git add <your-file> followed by git commit --amend --no-edit -> this will include a file you forgot on your last commit
+
+- git stash
+  this allows to save work without commiting it to repo commit history
+
+  - git stash -> this creates a stash, git stash pop-> this will get back
+  - git stash save <name>-> this Manages all stashes more easily by giving them a name
+  - git stash list-> this List out all stashes
+  - git stash apply <index>-> this Apply a stash based on its index
+
+- git rebase
+  this allows to merge updates with a clean commit history, this keeps feature branch upto date with master branch
+
+  - git checkout feature followed by git rebase master-> From a feature branch, rebase the latest changes from the master branch
+
+- git squash
+  take multiple of commits and combine to one single commit
+  - git rebase master --interactive-> this will Start an interactive rebase from a feature
+  - now choose the squash commend to flatten your commits into a single message
+
+## GitHub Actions
