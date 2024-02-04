@@ -72,3 +72,42 @@ It is a markdown file in repository!!
 
   - git clone <repo link> -> this will copy all the file in remote and write them to local machine
   - it keeps reference to original repo
+
+## Collaboration
+
+main branch is like main trunk of tree, branch allows to branch off from main
+tree trunk.
+
+- git bracnh:
+
+  - git branch->this will give list of all branch in current project
+  - git branch -M main-> this will rename branch to main
+  - git branch <branch name> ->this will create new branch
+  - git branch -d/-D <branch name> -> this delete the branch
+
+- git checkout:
+
+  - git checkout <branch name> -> this will take us to that branch
+
+- Merge conflicts
+  it occurs when we try to merge two diff branches and they modify the same lines of code
+
+  - git diff-> Used to compare the changes in the feature branch and master branch
+  - The easiest way to fix the merge conflict is use the editor to choose between the incoming changes (feature) or the existing changes (master). Then create a new merge commit with the changes you want to keep.
+  - git merge --abort-> If not sure, we can abort
+
+- Fork
+
+  - when we fork a repo it will copy that repo to my account
+  - this allow us to make changes to it without affecting the original repo
+  - at same time it maintains a link to original repo where we can fetch updates
+  - original repo is known as upstream repo
+
+- Pull Request
+
+  - it is way to submit contribution to another repo
+  - Fork a repo-> create a copy of another user's repo
+  - download a remote repo to local machine
+  - create a branch and make req changes (add->commit->push)
+  - git remote add upstream <link of forked repo>-> this will keep us insink with original
+  - git fetch upstream-> to download the changed and git rebase upstream/master->to add those changes to top of our work
