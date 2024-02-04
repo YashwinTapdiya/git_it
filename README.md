@@ -41,3 +41,34 @@ It is a markdown file in repository!!
 
   - every commit has a unique id that git can use to track diff
   - git log will give id, author and time of particular commit
+
+## Remote (GitHub)
+
+- git remote:
+
+  - this will show which remote repo is linked to local project
+  - to connect local code to github-> git remote add origin https://github.com/YashwinTapdiya/git_it.git
+  - git remote -v-> this will give url also
+  - git remote show origin-> this provides additional info about repo
+
+- git push:
+
+  - this will take code in our local repo and upload it up to remote repo
+  - git push -u origin master-> takes name of remote repo and branch which we want to push
+  - "-u" flag is used to set origin as the upstream remote in git config so git pull can be used without any arguments in the future.
+
+- git merge:
+
+  - git fetch-> this fetchs changes locally
+  - git merge-> it takes two diff branches and merge them together
+
+- git pull:
+
+  - this allows us to combine fetch + merge commands
+  - if we have any uncommited changes in local repo git pull will fail(not overwrite local changes)
+  - either commit the local changes first or use stash
+
+- git clone:
+
+  - git clone <repo link> -> this will copy all the file in remote and write them to local machine
+  - it keeps reference to original repo
